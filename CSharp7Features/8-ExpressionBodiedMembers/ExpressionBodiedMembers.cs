@@ -8,12 +8,11 @@ namespace CSharp7Features
     {
         class Person
         {
-            private static IList<string> names = new List<string>();
-            private int id => names.Count - 1;
+            private static ConcurrentDictionary<int, string> names = new ConcurrentDictionary<int, string>();
+            private int id = names.Count;
 
-
-            public Person(string name) => names.Add(name); // constructors
-            ~Person() => names.RemoveAt(id);
+            public Person(string name) => names.TryAdd(id, name); // constructors
+            ~Person() => names.TryRemove(id, out _);              // destructors
             public string Name
             {
                 get => names[id];                                 // getters
@@ -23,7 +22,10 @@ namespace CSharp7Features
 
         public static void Foo()
         {
-            var person = new Person("test");
+            var person1 = new Person("test1");
+            WriteLine($"Person: {person1.Name}");
+            var person2 = new Person("test2");
+            WriteLine($"Person: {person2.Name}");
         }
     }
 }

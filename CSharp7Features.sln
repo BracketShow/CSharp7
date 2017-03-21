@@ -5,6 +5,12 @@ VisualStudioVersion = 15.0.26228.4
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CSharp7Features", "CSharp7Features\CSharp7Features.csproj", "{0576DE9A-62A1-45CC-90BF-EC0D42B792A0}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{34CD6FC1-0B97-402F-B328-1D040C44F2FE}"
+	ProjectSection(SolutionItems) = preProject
+		README.md = README.md
+		README.md.vsspell = README.md.vsspell
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
