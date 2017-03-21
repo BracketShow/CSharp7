@@ -46,10 +46,26 @@ namespace CSharp7Features
             }
         }
 
-        public static void Foo()
+        public static void OldWay()
+        {
+            object o = 1;
+            if (o is int)
+            {
+                var i = (int)o;
+                WriteLine($"o is int = {i}");
+            }
+        }
+
+        public static void NewWay()
         {
             object o = 1;
             if (o is int i) WriteLine($"o is int = {i}");
+        }
+
+        public static void Foo()
+        {
+            OldWay();
+            NewWay();
 
             Show(new Circle(5));
             Show(new Rectangle(3, 5));

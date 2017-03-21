@@ -46,7 +46,7 @@ namespace CSharp7Features
             (bool HasFailed, string Reason) renamed = ProcesNew();
             if (renamed.HasFailed) WriteLine(renamed.Reason);
 
-            // Deconstruction
+            // Deconstruction explicit
             (bool hasFailed, string reason) = ProcesNew();
             if (hasFailed) WriteLine(reason);
 
