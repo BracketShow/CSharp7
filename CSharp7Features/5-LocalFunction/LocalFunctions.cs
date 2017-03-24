@@ -43,14 +43,16 @@ namespace CSharp7Features
 
         public static void Foo()
         {
-            { // Old Way
+            // Old Way
+            {
                 var numbers = new[] { 5, 3, 1, 7, 8, 9, 0, 2, 4, 6 };
                 WriteLine(string.Join(", ", numbers));
                 SortOld(numbers);
                 WriteLine(string.Join(", ", numbers));
             }
 
-            { // New Way
+            // New Way
+            {
                 var numbers = new[] { 5, 3, 1, 7, 8, 9, 0, 2, 4, 6 };
                 WriteLine(string.Join(", ", numbers));
                 SortNew(numbers);
