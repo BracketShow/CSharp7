@@ -5,26 +5,6 @@ namespace CSharp7Features
 {
     public static class PatternMatching
     {
-        abstract class Shape
-        {
-            public abstract double Area();
-        }
-
-        class Circle : Shape
-        {
-            public Circle(double radius) => Radius = radius;
-            public double Radius { get; set; }
-            public override double Area() => Math.PI * (Radius * Radius);
-        }
-
-        class Rectangle : Shape
-        {
-            public Rectangle(double length, double height) => (Length, Height) = (length, height);
-            public double Length { get; set; }
-            public double Height { get; set; }
-            public override double Area() => Length * Height;
-        }
-
         private static void ShowOld(Shape shape)
         {
             switch (shape.GetType().Name)
@@ -103,4 +83,26 @@ namespace CSharp7Features
             ShowNew(new Rectangle(4, 4));
         }
     }
+
+    abstract class Shape
+    {
+        public abstract double Area();
+    }
+
+    class Circle : Shape
+    {
+        public Circle(double radius) => Radius = radius;
+        public double Radius { get; set; }
+        public override double Area() => Math.PI * (Radius * Radius);
+    }
+
+    class Rectangle : Shape
+    {
+        public Rectangle(double length, double height) => (Length, Height) = (length, height);
+        public double Length { get; set; }
+        public double Height { get; set; }
+        public override double Area() => Length * Height;
+    }
+
+
 }

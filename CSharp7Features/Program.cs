@@ -5,7 +5,7 @@
         static void Main(string[] args)
         {
             //OutVar.Foo();
-            PatternMatching.Foo();
+            //PatternMatching.Foo();
             //Tuples.Foo();
             //Deconstructors.Foo();
             //LocalFunctions.Foo();
